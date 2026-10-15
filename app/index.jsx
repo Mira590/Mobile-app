@@ -1,17 +1,25 @@
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View,TextInput } from 'react-native';
 import icon from '../assets/favicon.png';
 import { Link } from 'expo-router';
+import ThemedView from '../Component/ThemedView';
+import ThemedText from '../Component/ThemedText';
+
 
 const index=()=>{
   return (
-    <View style={styles.container}>
+    <ThemedView style={styles.container}>
         <Image source={icon} style={styles.img} />
-         <Text style={{marginTop:10,fontSize:20 ,}} >Welcome</Text>
+         <ThemedText style={{marginTop:10,fontSize:20 ,marginBottom:10}} >Welcome</ThemedText>
       
-      <Text style={styles.title}>Mira jan Najme error</Text>
-      <Link href="/about">About Page</Link>
+         
       
-    </View  >
+     
+      
+      <Link href="/Login">
+        <ThemedText>Login</ThemedText>
+      </Link>
+      
+    </ThemedView>
   )
 }
 
